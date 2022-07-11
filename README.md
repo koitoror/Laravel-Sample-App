@@ -1,6 +1,6 @@
 # LaraGigs app
 
-An app for listing Laravel gigs/jobs. This project is from my YouTube "[Laravel From Scratch 2022](https://www.youtube.com/watch?v=MYyJ4PuL4pY)" course.
+An app for listing Laravel gigs/jobs. 
 
 ![Alt text](/public/images/screen.png "LaraGigs")
 
@@ -33,6 +33,21 @@ php artisan storage:link
 Upload the files to your document root, Valet folder or run 
 ```
 php artisan serve
+```
+
+### Running The App on Docker and sail cli
+
+Bash alias for sail setup
+```
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+```
+
+To start all of the Docker containers in the background, you may start Sail in "detached" mode:
+
+```
+sail up -d
+sail php --version
+
 ```
 
 ## License
