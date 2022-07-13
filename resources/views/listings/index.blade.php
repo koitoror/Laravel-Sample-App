@@ -1,6 +1,6 @@
 <x-layout>
   @if (!Auth::check())
-    @include('partials._hero')
+  @include('partials._hero')
   @endif
 
   @include('partials._search')
@@ -22,27 +22,4 @@
   <div class="mt-6 p-4">
     {{$listings->links()}}
   </div>
-</x-layout>
-
-<x-layout>
-  @if(!Auth::check())
-    @include('partials._hero')
-  @endif
-
-  @include('partials._search')
-
-  <div>
-    @unless(count($listing) == 0)
-
-    @foreach($listings and $listing)
-    <x-listing-card :listing="$listing">
-    @endforeach
-
-    @else
-    p.listing
-    @endunless
-
-  </div>
-  
-
 </x-layout>
