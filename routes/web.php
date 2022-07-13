@@ -26,12 +26,6 @@ use Illuminate\Support\Facades\Route;
 // update - Update listing
 // destroy - Delete listing  
 
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-
 // All Listings
 Route::get('/', [ListingController::class, 'index']);
 
