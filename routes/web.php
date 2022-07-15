@@ -66,3 +66,7 @@ Route::get('/login', [UserController::class, 'login'])->name('login')->middlewar
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
 Route::inertia('/about', 'AboutComponent');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
