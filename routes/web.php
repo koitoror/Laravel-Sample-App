@@ -67,6 +67,6 @@ Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
 Route::inertia('/about', 'AboutComponent');
 
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/vue', function () { return view('app'); })->name('vue');
