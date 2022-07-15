@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Validation\Rule;
+use Inertia\Inertia;
+
 
 class UserController extends Controller
 {
@@ -63,5 +66,19 @@ class UserController extends Controller
         }
 
         return back()->withErrors(['email' => 'Invalid Credentials'])->onlyInput('email');
+    }
+
+    public function index() {
+        return Inertia::render('Users/Index', [
+            'users' => User::all()->map(function ($user) {
+                return [
+                    'id' => $user->id,
+                    'name' => $user->name,
+                    'email' => $user->email,
+                    // 'edit_url' => URL::route('users.edit', $user),
+                ];
+            }),
+            'create_url' => URL::route('users.create'),
+        ]);
     }
 }
