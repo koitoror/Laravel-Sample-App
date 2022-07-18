@@ -23,5 +23,9 @@
         "vue-router": "^4.1.2",
         "vue-template-compiler": "^2.6.12",
         "vuex": "^4.0.2"
+    },
+    "dependencies": {
+        "@vitejs/plugin-vue": "^3.0.1",
+        "@vue/compiler-sfc": "^3.2.37"
     }
 }

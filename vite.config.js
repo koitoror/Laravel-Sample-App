@@ -9,5 +9,7 @@ export default defineConfig({
             'resources/css/app.css',
             'resources/js/app.js',
         ]),
+        // sass('resources/sass/app.scss', 'public/css'),
+        // sourceMaps()
     ],
 });
