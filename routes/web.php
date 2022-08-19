@@ -71,6 +71,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/vue', function () { return view('app'); })->name('vue');
 
-Route::get('{any}', function () {
-    return view('app');
-})->where('any','.*');
+// Route::get('{any}', function () {
+//     return view('app');
+// })->where('any','.*');
+
+
+Route::get('/vue1', function () {
+    return view('vue');
+});
